@@ -1,5 +1,6 @@
 import "./styles.css";
 
+
 export default function ListingAd({ pic, title, address, description }) {
   return (
     <div className="App">

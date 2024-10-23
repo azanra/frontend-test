@@ -4,6 +4,10 @@
   border: 1px solid black;
 }
 
+.description {
+  opacity: 0;
+}
+
 .mainPic {
 }
 

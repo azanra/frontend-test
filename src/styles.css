@@ -23,10 +23,38 @@ h1, p {
   margin: 0;
 }
 
-.mainPic {
+.image-container {
   width: 100%;
   height: 50%;
   border-radius: 5px;
+}
+
+.svg-container {
+  position: relative;
+  /* opacity: 0; */
+}
+
+.left-arrow {
+  position: absolute;
+  left: 20px;
+  top: 100px;
+}
+
+.right-arrow {
+  position: absolute;
+  right: 20px;
+  top: 100px;
+}
+
+
+.mainPic {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.mainPic:hover {
+  
 }
 
 .address,

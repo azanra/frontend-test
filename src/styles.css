@@ -11,12 +11,12 @@
 .App {
   font-family: 'avenir', sans-serif;
   text-align: center;
-  border: 1px solid black;
-  height: 70vh;
+  height: 65vh;
   width: 40vw;
   border-radius: 5px;
   font-size: 10px;
   color: #1A2258;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 h1, p {
@@ -26,6 +26,7 @@ h1, p {
 .mainPic {
   width: 100%;
   height: 50%;
+  border-radius: 5px;
 }
 
 .address,
@@ -78,5 +79,3 @@ h1, p {
   color: #216BFF;
 }
 
-.mainContent {
-}

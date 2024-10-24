@@ -8,7 +8,7 @@ function ButtonElement({ phone_number, description_text, owner_number, contact_t
   }
   return (
     <>
-      <button onClick={displayElement}>See description</button>
+      <button className="btn-click" onClick={displayElement}>See description</button>
       {displayDescription ? <DescriptionElement style={{ opacity: 1 }} phone_number={phone_number}
         description_text={description_text}
         owner_number={owner_number}
@@ -87,16 +87,17 @@ export default function ListingAd({ pic, title, address, project_type, year, own
             <p className="year">{year}</p>
             <p className="owner-type">{ownership_type}</p>
           </div>
-          <p className="availabilities">{availabilities_label}</p>
+          <p className="available">{availabilities_label}</p>
         </div>
-
-        <ButtonElement phone_number={phone_number}
-          description_text={description_text}
-          owner_number={owner_number}
-          contact_text_visit={contact_text_visit}
-          contact_text_mid={contact_text_mid}
-          contact_text_owner={contact_text_owner}
-          viewing_number={viewing_number} />
+        <div className="bottom-part">
+          <ButtonElement phone_number={phone_number}
+            description_text={description_text}
+            owner_number={owner_number}
+            contact_text_visit={contact_text_visit}
+            contact_text_mid={contact_text_mid}
+            contact_text_owner={contact_text_owner}
+            viewing_number={viewing_number} />
+        </div>
       </div>
     </div>
   );

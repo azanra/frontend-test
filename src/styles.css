@@ -31,21 +31,26 @@ h1, p {
 
 .svg-container {
   position: relative;
-  /* opacity: 0; */
 }
 
 .left-arrow {
   position: absolute;
   left: 20px;
   top: 100px;
+  opacity: 0;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+  opacity: 1;
 }
 
 .right-arrow {
   position: absolute;
   right: 20px;
   top: 100px;
+  opacity: 0;
 }
-
 
 .mainPic {
   width: 100%;

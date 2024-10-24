@@ -21,6 +21,11 @@ function ButtonElement({phone_number, description_text, owner_number, contact_te
 }
 
 function DescriptionElement({phone_number, description_text, owner_number, contact_text_visit, contact_text_mid, contact_text_owner, viewing_number}) {
+  const [displayNum, setDisplayNum] = useState(false);
+  function displayOri() {
+      setDisplayNum(!displayNum);
+  }
+
   function anonNumber(number) {;
     let arr = [];
     arr = number.split('');
@@ -44,13 +49,14 @@ function DescriptionElement({phone_number, description_text, owner_number, conta
 
   let anonPhoneNum = anonNumber(phone_number);
   let anonOwnerNum = anonNumber(owner_number);
-  let anonViewNum = anonNumber(viewing_number);
 
   return (
     <>
-      <p>Phone number : {anonPhoneNum}</p>
-      <p>{description_text}</p>
-      <p>{contact_text_visit + anonViewNum + contact_text_mid + anonOwnerNum + contact_text_owner}</p>
+      <div onClick={displayOri}>
+        <p>Phone number : {displayNum ? phone_number : anonPhoneNum}</p>
+        <p>{description_text}</p>
+        <p>{contact_text_visit + (displayNum ? phone_number : anonPhoneNum) + contact_text_mid + (displayNum ? owner_number : anonOwnerNum) + contact_text_owner}</p>
+      </div>
     </>
   )
 }

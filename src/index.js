@@ -21,7 +21,6 @@ const store = {
   contact_text_visit: 'Please call Alex B (CEA No: R0123456) @ ',
   contact_text_mid : ' or the owner ',
   contact_text_owner : ' to arrange for a viewing.',
-  viewing_number: '82345678',
 };
 
 ReactDOM.render(
